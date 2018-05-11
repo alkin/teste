@@ -1,22 +1,14 @@
+// Frontend Framework: vue, react, angular
+const frontend = 'vue';
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+// CSS Framework: semantic, bootstrap
+const css = 'semantic';
 
-require('./bootstrap');
+// Load CSS Framework
+if (css == 'semantic') require('./semantic.js');
+if (css == 'bootstrap') require('./bootstrap.js');
 
-window.Vue = require('vue');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
+// Run App with desired framework
+if (frontend == 'vue') require('./vue.js');
+if (frontend == 'react') require('./react.js');
+if (frontend == 'angular') require('./angular.js');

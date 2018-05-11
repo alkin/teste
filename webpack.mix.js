@@ -11,5 +11,20 @@ let mix = require('laravel-mix');
  |
  */
 
+
+const config = {
+    resolve: {
+        alias: {
+            // Project's Home Folder
+            '~': path.resolve(__dirname),
+            // JS Home Folder
+            '@': path.resolve(__dirname, 'resources/assets/js'),
+        },
+    },
+
+};
+
+mix.webpackConfig(config);
+
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
