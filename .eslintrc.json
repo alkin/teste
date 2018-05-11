@@ -1,0 +1,41 @@
+{
+    "extends": [
+        "airbnb",
+        "prettier"
+    ],
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "import/first": [
+            "off"
+        ],
+        "consistent-return": [
+            "off"
+        ],
+        "no-param-reassign": [
+            "off"
+        ],
+        "global-require": [
+            "off"
+        ],
+        "prefer-destructuring": [
+            "off"
+        ],
+        "func-names": [
+            "error",
+            "never"
+        ]
+    },
+    "globals": {
+        "Echo": true
+    },
+    "env": {
+        "browser": true,
+        "jquery": true
+    }
+}

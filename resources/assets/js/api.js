@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import axios from 'axios';
 
-export const boards = {
-    all() {
-        return axios.get('/boards');
+export const posts = {
+    find(id) {
+        return axios.get(`/posts/${id}`);
     }
 };

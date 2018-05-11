@@ -12,3 +12,33 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+
+body, html {
+    font-size: 16px;
+}
+
+body {
+    padding: 2em;
+}
+
+.ui.card {
+    width: 560px;
+
+    .head {
+        & > div {
+            display: inline-block;
+            vertical-align: top;
+            line-height: 1em;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    img.picture {
+        width: 100%;
+    }
+    .card-body {
+        padding: 0.75em 1.25em;
+    }
+}

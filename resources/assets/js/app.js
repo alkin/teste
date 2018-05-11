@@ -1,8 +1,8 @@
-// Frontend Framework: vue, react, angular
-const frontend = 'vue';
+const css = BUILD.css;
+const frontend = BUILD.frontend;
 
-// CSS Framework: semantic, bootstrap
-const css = 'semantic';
+// Load jQuery
+window.$ = window.jQuery = require('jquery');
 
 // Load CSS Framework
 if (css == 'semantic') require('./semantic.js');

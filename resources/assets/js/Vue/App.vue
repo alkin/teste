@@ -1,30 +1,29 @@
 <template>
-    <div class="flex-center position-ref full-height">
-        <div class="top-right links">
-            <a href="/">Home</a>
-        </div>
-
-        <div class="content">
-            <div class="title m-b-md">
-                Trelloas
-            </div>
-
-            <div class="links">
-
-            </div>
-        </div>
+    <div class="ui container">
+        <Post :post="post"></Post>
     </div>
 </template>
 
 <script>
-import { boards } from "@/api.js";
+import { posts } from '@/api.js';
+import Post from './Post.vue';
 
 export default {
-  mounted() {
-    boards.all().then(response => {
-      console.log("Teste de API:");
-      console.log(response.data);
-    });
-  }
+    components: {
+        Post
+    },
+    data() {
+        return {
+            post: {}
+        };
+    },
+    mounted() {
+        posts.find(1).then(response => {
+            console.log('Teste de API:');
+            console.log(response.data);
+
+            this.post = response.data;
+        });
+    }
 };
 </script>
