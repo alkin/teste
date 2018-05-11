@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
 
         \App\Post::forceCreate([
             'user_name'    => 'Iron Man',
-            'user_picture' => 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/b8/b84b9243a23448e1016fee728d6825c634256526_full.jpg',
+            'user_image'   => 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/b8/b84b9243a23448e1016fee728d6825c634256526_full.jpg',
             'message'      => 'Celebração de fim de ano dos Vingadores =D #teamstark',
             'picture'      => 'https://www.screengeek.net/wp-content/uploads/2017/04/avengers-4.png',
         ]);

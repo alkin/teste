@@ -2,7 +2,6 @@
     <div v-if="post">
         <div class="ui card">
             <div class="head content card-body">
-
                 <div style="width: 32px;">
                     <img :src="post.user_image" class="user-picture">
                 </div>
@@ -10,7 +9,6 @@
                     <strong>{{post.user_name}}</strong> postou uma nova foto.<br>
                     <small>{{post.created_at}}</small>
                 </div>
-
             </div>
             <div class="content card-body">
                 {{post.message}}
@@ -19,7 +17,7 @@
                 <img :src="post.picture" class="picture">
             </div>
             <div class="content card-body">
-                Comentários
+                <Comments :comments="post.comments" />
             </div>
         </div>
     </div>
@@ -27,9 +25,13 @@
 
 <script>
 import { posts } from '@/api.js';
+import Comments from './Comments.vue';
 
 export default {
-    props: ['post']
+    props: ['post'],
+    components: {
+        Comments
+    }
 };
 </script>
 

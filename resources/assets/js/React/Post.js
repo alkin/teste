@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import Comments from './Comments.js';
+
 export default class Post extends Component {
     constructor(props) {
         super(props);
@@ -30,7 +32,7 @@ export default class Post extends Component {
                         <img src={post.picture} className="picture" />
                     </div>
                     <div className="content card-body">
-                        Comentários
+                        <Comments comments={post.comments} />
                     </div>
                 </div>
             </div >

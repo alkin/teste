@@ -24,7 +24,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="container">
-                {this.state.post ? (<Post post={this.state.post}></Post>) : 'a'}
+                {this.state.post ? (<Post post={this.state.post}></Post>) : ''}
             </div>
         );
     }
