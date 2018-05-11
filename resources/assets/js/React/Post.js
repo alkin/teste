@@ -35,7 +35,7 @@ export default class Post extends Component {
                         <Comments comments={post.comments} />
                     </div>
                 </div>
-            </div >
+            </div>
         );
     }
 }

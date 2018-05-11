@@ -5,8 +5,6 @@ import { posts } from '@/api.js';
 import Post from './Post.js';
 
 export default class App extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {

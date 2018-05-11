@@ -10,15 +10,13 @@ const config = {
             '@': path.resolve(__dirname, 'resources/assets/js'),
         },
     },
-
 };
 
 mix.webpackConfig(config);
-
 mix.sass('resources/assets/sass/app.scss', 'public/css');
 
-// REACT !
-mix.react('resources/assets/js/app.js', 'public/js');
+// REACT
+// mix.react('resources/assets/js/app.js', 'public/js');
 
 // VUEJS
 // mix.js('resources/assets/js/app.js', 'public/js');

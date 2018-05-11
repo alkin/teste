@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+const thorImg = 'http://media.socastsrm.com/wordpress/wp-content/blogs.dir/684/files/2017/04/thor.jpg';
+
 export default class Comments extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +15,7 @@ export default class Comments extends Component {
         const post = this.props.post;
         return (
             <div>
-                <img src="http://media.socastsrm.com/wordpress/wp-content/blogs.dir/684/files/2017/04/thor.jpg" style={{ float: "left", width: "42px", display: "inline-block" }} />
+                <img src={thorImg} style={{ float: "left", width: "42px", display: "inline-block" }} />
                 <div class="ui input form-group" style={{ paddingLeft: "1em", width: "475px" }}>
                     <input class="form-control" type="text" placeholder="Digite seu comentário" />
                 </div>
