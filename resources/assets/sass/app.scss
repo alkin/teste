@@ -22,8 +22,14 @@ body {
     padding: 2em;
 }
 
+
+.ui.container {
+    padding-bottom: 2rem;
+}
 .ui.card {
     width: 560px;
+    margin: 0px auto;
+    margin-bottom: 2rem;
 
     .head {
         & > div {

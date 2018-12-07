@@ -1,28 +1,38 @@
 <template>
     <div class="ui container">
-        <Post :post="post"></Post>
+        <Post :post="post" />
+        <MyImage :image="image" />
+        <Quote :quote="quote" />
     </div>
 </template>
 
 <script>
-import { posts } from '@/api.js';
-import Post from './Post.vue';
+import { posts, images, quotes } from '@/api.js';
 
 export default {
     components: {
-        Post
+        Post: require('./Post.vue'),
+        MyImage: require('./Image.vue'),
+        Quote: require('./Quote.vue')
     },
     data() {
         return {
-            post: {}
+            post: {},
+            image: {},
+            quote: {}
         };
     },
     mounted() {
         posts.find(1).then(response => {
-            console.log('Teste de API:');
-            console.log(response.data);
-
             this.post = response.data;
+        });
+
+        images.find(1).then(response => {
+            this.image = response.data;
+        });
+
+        quotes.find(1).then(response => {
+            this.quote = response.data;
         });
     }
 };

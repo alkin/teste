@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::apiResource('posts', 'PostController');
+Route::apiResource('images', 'ImageController');
+Route::apiResource('quotes', 'QuoteController');
